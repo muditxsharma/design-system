@@ -51,7 +51,7 @@ if lib is not None:
  lib.JSStringRelease.argtypes=[ptr];lib.JSGlobalContextRelease.argtypes=[ptr]
  ctx=lib.JSGlobalContextCreate(None)
  for path in [*ROOT.glob('packages/**/*.js'),*ROOT.glob('apps/**/*.js')]:
-  if any(part in {'node_modules','dist'} for part in path.parts):continue
+  if any(part in {'node_modules','dist','.vite'} for part in path.parts):continue
   script=lib.JSStringCreateWithUTF8CString(path.read_bytes());error=ptr()
   assert lib.JSCheckScriptSyntax(ctx,script,None,1,ctypes.byref(error)),f'JS syntax error: {path}'
   lib.JSStringRelease(script)
@@ -76,7 +76,7 @@ if lib is not None:
 else:
  # Linux CI runs the same native state contracts in an isolated Node VM.
  sources=[str(p) for p in [*ROOT.glob('packages/**/*.js'),*ROOT.glob('apps/**/*.js')]
-          if not any(part in {'node_modules','dist'} for part in p.parts)]
+          if not any(part in {'node_modules','dist','.vite'} for part in p.parts)]
  runner="""
  const fs=require('node:fs'),vm=require('node:vm');
  const files=JSON.parse(process.argv[1]);
