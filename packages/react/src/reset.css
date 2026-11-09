@@ -1,0 +1,2 @@
+/* Optional application-wide Tailwind Preflight. Import only when your app wants it. */
+@import 'tailwindcss/preflight.css';

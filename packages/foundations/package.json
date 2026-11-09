@@ -1,0 +1,11 @@
+{
+  "name": "@design-library/foundations",
+  "version": "0.3.0",
+  "private": true,
+  "files": [
+    "*.css",
+    "*.js",
+    "*.json",
+    "README.md"
+  ]
+}

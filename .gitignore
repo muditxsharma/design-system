@@ -34,3 +34,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Workspace installs and build/test output
+**/node_modules/
+**/dist/
+**/test-results/
+**/playwright-report/
+
+# Local packed artifacts and isolated consumer results
+/artifacts/
+
+# ref Docs
+/docs

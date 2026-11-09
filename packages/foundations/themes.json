@@ -1,0 +1,297 @@
+{
+  "status": "Exploratory implementation values; not approved production tokens",
+  "themes": {
+    "forma": {
+      "name": "Forma",
+      "description": "Friendly, natural surfaces and a fresh green accent.",
+      "font": "Arial, sans-serif",
+      "display": "Arial, sans-serif",
+      "radius": "12px",
+      "light": [
+        "#f6f7f3",
+        "#ffffff",
+        "#20231e",
+        "#64695d",
+        "#d5dacd",
+        "#b8f36b",
+        "#20231e",
+        "#eef1e8"
+      ],
+      "dark": [
+        "#171a15",
+        "#20241d",
+        "#edf0e8",
+        "#adb5a4",
+        "#48513e",
+        "#b8f36b",
+        "#20231e",
+        "#2c3426"
+      ],
+      "expressions": [
+        "Light",
+        "Dark"
+      ],
+      "source": "forma.html",
+      "mono": "ui-monospace, monospace",
+      "principles": "Soft grouping \u00b7 quiet borders \u00b7 confident ink actions",
+      "componentCharacter": "Rounded groups, pill controls, natural surfaces, and friendly spacing."
+    },
+    "minimal": {
+      "name": "Minimal",
+      "description": "The Architect. Continuous divisions, proportional grids, and measured emphasis.",
+      "font": "\"Geist Sans\", Arial, sans-serif",
+      "display": "\"Geist Sans\", Arial, sans-serif",
+      "radius": "2px",
+      "light": [
+        "#f1f5fa",
+        "#f7f9fc",
+        "#243142",
+        "#566a80",
+        "#b9cee5",
+        "#3972c3",
+        "#ffffff",
+        "#e0eaf7"
+      ],
+      "dark": [
+        "#1c2735",
+        "#243142",
+        "#eff4fb",
+        "#b7c7da",
+        "#50647e",
+        "#a6c9fb",
+        "#17293f",
+        "#2c4058"
+      ],
+      "expressions": [
+        "Blueprint",
+        "Command"
+      ],
+      "source": "structuredChaos.html",
+      "mono": "\"Geist Mono\", ui-monospace, monospace",
+      "principles": "Shared rules \u00b7 technical labels \u00b7 precise controls",
+      "componentCharacter": "Continuous divisions, measured proportions, and neutral instrument-like surfaces."
+    },
+    "nocturne": {
+      "name": "Nocturne",
+      "description": "The Dreamer. Dimensional layers and a controlled prismatic atmosphere.",
+      "font": "Sora, Arial, sans-serif",
+      "display": "\"Space Grotesk\", Arial, sans-serif",
+      "radius": "16px",
+      "light": [
+        "#f0eaf9",
+        "#fcf9ff",
+        "#30213f",
+        "#6e587e",
+        "#ccbddc",
+        "#69429c",
+        "#ffffff",
+        "#e4d8f3"
+      ],
+      "dark": [
+        "#21133b",
+        "#302044",
+        "#f6efff",
+        "#c5b4d8",
+        "#69527e",
+        "#d5b4fa",
+        "#29153e",
+        "#503471"
+      ],
+      "expressions": [
+        "Daydream",
+        "Nebula"
+      ],
+      "source": "structuredChaos.html",
+      "mono": "\"Space Mono\", ui-monospace, monospace",
+      "principles": "Layered planes \u00b7 refractive edges \u00b7 spatial grouping",
+      "componentCharacter": "Opaque functional surfaces sit within gently elevated, dimensional groups."
+    },
+    "brutalism": {
+      "name": "Brutalism",
+      "description": "The Rebel. Hard rules, condensed headlines, and decisive mechanical changes.",
+      "font": "\"IBM Plex Sans\", Arial, sans-serif",
+      "display": "\"Barlow Condensed\", Impact, sans-serif",
+      "radius": "0px",
+      "light": [
+        "#f2f0e9",
+        "#f2f0e9",
+        "#111111",
+        "#515149",
+        "#111111",
+        "#d9ff36",
+        "#111111",
+        "#e3e0d6"
+      ],
+      "dark": [
+        "#242424",
+        "#242424",
+        "#f2f0e9",
+        "#c2c0b6",
+        "#aaa99e",
+        "#d9ff36",
+        "#111111",
+        "#34342f"
+      ],
+      "expressions": [
+        "Manifesto",
+        "Underground"
+      ],
+      "source": "structuredChaos.html",
+      "mono": "\"IBM Plex Mono\", ui-monospace, monospace",
+      "principles": "Hard framing \u00b7 reversed labels \u00b7 editorial hierarchy",
+      "componentCharacter": "Heavy rules, stamped selections, condensed headings, and controlled offsets."
+    }
+  },
+  "accentFamilies": {
+    "minimal": [
+      [
+        "Blueprint Blue",
+        "#3972C3",
+        [
+          "#3972c3",
+          "#fff",
+          "#b9cee5",
+          "#e0eaf7"
+        ],
+        [
+          "#a6c9fb",
+          "#17293f",
+          "#50647e",
+          "#2c4058"
+        ]
+      ],
+      [
+        "Terracotta Orange",
+        "#C46A4A",
+        [
+          "#a54d31",
+          "#fff",
+          "#d8b5a8",
+          "#f3e4dd"
+        ],
+        [
+          "#dfa58e",
+          "#302019",
+          "#806257",
+          "#49342e"
+        ]
+      ],
+      [
+        "Emerald Green",
+        "#27866C",
+        [
+          "#216f59",
+          "#fff",
+          "#a6cdbf",
+          "#deeee7"
+        ],
+        [
+          "#8fcbb7",
+          "#152e25",
+          "#4d7566",
+          "#29483c"
+        ]
+      ]
+    ],
+    "nocturne": [
+      [
+        "Ultraviolet / Iris",
+        "#7450B5",
+        [
+          "#69429c",
+          "#fff",
+          "#ccbddc",
+          "#e4d8f3"
+        ],
+        [
+          "#d5b4fa",
+          "#29153e",
+          "#69527e",
+          "#503471"
+        ]
+      ],
+      [
+        "Orchid / Magenta",
+        "#C66AC5",
+        [
+          "#854080",
+          "#fff",
+          "#d6b6d8",
+          "#eddaee"
+        ],
+        [
+          "#e6ade2",
+          "#30172e",
+          "#835f85",
+          "#553255"
+        ]
+      ],
+      [
+        "Iris / Cool Refraction",
+        "#6DABD3",
+        [
+          "#4f5198",
+          "#fff",
+          "#b9c5dc",
+          "#dde8f4"
+        ],
+        [
+          "#b9c4f4",
+          "#201d3d",
+          "#5d6e90",
+          "#343e61"
+        ]
+      ]
+    ],
+    "brutalism": [
+      [
+        "Acid Lime",
+        "#D9FF36",
+        [
+          "#d9ff36",
+          "#111",
+          "#111",
+          "#e3e0d6"
+        ],
+        [
+          "#d9ff36",
+          "#111",
+          "#aaa99e",
+          "#34342f"
+        ]
+      ],
+      [
+        "Industrial Orange",
+        "#F26B2E",
+        [
+          "#f26b2e",
+          "#111",
+          "#111",
+          "#e3e0d6"
+        ],
+        [
+          "#f26b2e",
+          "#111",
+          "#aaa99e",
+          "#34342f"
+        ]
+      ],
+      [
+        "Electric Violet",
+        "#8955E8",
+        [
+          "#8955e8",
+          "#fff",
+          "#111",
+          "#e3e0d6"
+        ],
+        [
+          "#8955e8",
+          "#fff",
+          "#aaa99e",
+          "#34342f"
+        ]
+      ]
+    ]
+  }
+}

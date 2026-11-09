@@ -1,0 +1,113 @@
+{
+  "name": "@inverse_ratio/design-system",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./ui/*": {
+      "types": "./dist/ui/*.d.ts",
+      "import": "./dist/ui/*.js"
+    },
+    "./ai": {
+      "types": "./dist/ai/index.d.ts",
+      "import": "./dist/ai/index.js"
+    },
+    "./theme": {
+      "types": "./dist/theme.d.ts",
+      "import": "./dist/theme.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./reset.css": "./dist/reset.css",
+    "./themes.json": "./dist/themes.json",
+    "./lib/*": {
+      "types": "./dist/lib/*.d.ts",
+      "import": "./dist/lib/*.js"
+    },
+    "./hooks/*": {
+      "types": "./dist/hooks/*.d.ts",
+      "import": "./dist/hooks/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/build.mjs",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.9.0",
+    "@hookform/resolvers": "^7.0.5",
+    "@shadcn/react": "^0.3.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "cn": "^0.5.2",
+    "date-fns": "^4.4.0",
+    "embla-carousel-react": "^8.6.0",
+    "input-otp": "^1.5.0",
+    "lucide-react": "^0.468.0",
+    "next-themes": "^0.4.6",
+    "radix-ui": "^1.8.1",
+    "react-day-picker": "^10.0.2",
+    "react-hook-form": "^7.91.0",
+    "react-resizable-panels": "^4.21.0",
+    "recharts": "^3.8.0",
+    "shiki": "^4.6.0",
+    "sonner": "^2.0.8",
+    "tailwind-merge": "^3.0.0",
+    "vaul": "^1.1.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "esbuild": "^0.25.12",
+    "postcss": "^8.5.32",
+    "postcss-selector-parser": "^7.2.0",
+    "typescript": "^5.7.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.0"
+  },
+  "description": "React components, AI interface patterns and four design-system identities built on shadcn/ui.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.shadcn",
+    "UPSTREAM.md",
+    "upstream-manifest.json",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muditxsharma/design-system.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/muditxsharma/design-system#readme",
+  "bugs": {
+    "url": "https://github.com/muditxsharma/design-system/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "ui": [
+    {
+      "name": "Accordion",
+      "group": "Layout"
+    },
+    {
+      "name": "Alert",
+      "group": "Feedback"
+    },
+    {
+      "name": "Alert Dialog",
+      "group": "Overlay"
+    },
+    {
+      "name": "Aspect Ratio",
+      "group": "Layout"
+    },
+    {
+      "name": "Attachment",
+      "group": "Forms"
+    },
+    {
+      "name": "Avatar",
+      "group": "Data"
+    },
+    {
+      "name": "Badge",
+      "group": "Feedback"
+    },
+    {
+      "name": "Breadcrumb",
+      "group": "Navigation"
+    },
+    {
+      "name": "Bubble",
+      "group": "Communication"
+    },
+    {
+      "name": "Button",
+      "group": "Actions"
+    },
+    {
+      "name": "Button Group",
+      "group": "Actions"
+    },
+    {
+      "name": "Calendar",
+      "group": "Forms"
+    },
+    {
+      "name": "Card",
+      "group": "Layout"
+    },
+    {
+      "name": "Carousel",
+      "group": "Data"
+    },
+    {
+      "name": "Chart",
+      "group": "Data"
+    },
+    {
+      "name": "Checkbox",
+      "group": "Forms"
+    },
+    {
+      "name": "Code Block",
+      "group": "Data"
+    },
+    {
+      "name": "Collapsible",
+      "group": "Layout"
+    },
+    {
+      "name": "Combobox",
+      "group": "Forms"
+    },
+    {
+      "name": "Command",
+      "group": "Overlay"
+    },
+    {
+      "name": "Context Menu",
+      "group": "Overlay"
+    },
+    {
+      "name": "Data Table",
+      "group": "Data"
+    },
+    {
+      "name": "Date Picker",
+      "group": "Forms"
+    },
+    {
+      "name": "Dialog",
+      "group": "Overlay"
+    },
+    {
+      "name": "Direction",
+      "group": "Layout"
+    },
+    {
+      "name": "Drawer",
+      "group": "Overlay"
+    },
+    {
+      "name": "Dropdown Menu",
+      "group": "Navigation"
+    },
+    {
+      "name": "Empty",
+      "group": "Feedback"
+    },
+    {
+      "name": "Field",
+      "group": "Forms"
+    },
+    {
+      "name": "Hover Card",
+      "group": "Overlay"
+    },
+    {
+      "name": "Input",
+      "group": "Forms"
+    },
+    {
+      "name": "Input Group",
+      "group": "Forms"
+    },
+    {
+      "name": "Input OTP",
+      "group": "Forms"
+    },
+    {
+      "name": "Item",
+      "group": "Layout"
+    },
+    {
+      "name": "Kbd",
+      "group": "Data"
+    },
+    {
+      "name": "Label",
+      "group": "Forms"
+    },
+    {
+      "name": "Marker",
+      "group": "Data"
+    },
+    {
+      "name": "Menubar",
+      "group": "Navigation"
+    },
+    {
+      "name": "Message",
+      "group": "Communication"
+    },
+    {
+      "name": "Message Scroller",
+      "group": "Communication"
+    },
+    {
+      "name": "Native Select",
+      "group": "Forms"
+    },
+    {
+      "name": "Navigation Menu",
+      "group": "Navigation"
+    },
+    {
+      "name": "Pagination",
+      "group": "Navigation"
+    },
+    {
+      "name": "Popover",
+      "group": "Overlay"
+    },
+    {
+      "name": "Progress",
+      "group": "Feedback"
+    },
+    {
+      "name": "Questionnaire",
+      "group": "Forms"
+    },
+    {
+      "name": "Radio Group",
+      "group": "Forms"
+    },
+    {
+      "name": "Resizable",
+      "group": "Layout"
+    },
+    {
+      "name": "Scroll Area",
+      "group": "Layout"
+    },
+    {
+      "name": "Select",
+      "group": "Forms"
+    },
+    {
+      "name": "Separator",
+      "group": "Layout"
+    },
+    {
+      "name": "Sheet",
+      "group": "Overlay"
+    },
+    {
+      "name": "Sidebar",
+      "group": "Navigation"
+    },
+    {
+      "name": "Skeleton",
+      "group": "Feedback"
+    },
+    {
+      "name": "Slider",
+      "group": "Forms"
+    },
+    {
+      "name": "Spinner",
+      "group": "Feedback"
+    },
+    {
+      "name": "Switch",
+      "group": "Forms"
+    },
+    {
+      "name": "Table",
+      "group": "Data"
+    },
+    {
+      "name": "Tabs",
+      "group": "Navigation"
+    },
+    {
+      "name": "Textarea",
+      "group": "Forms"
+    },
+    {
+      "name": "Toast",
+      "group": "Feedback"
+    },
+    {
+      "name": "Toggle",
+      "group": "Actions"
+    },
+    {
+      "name": "Toggle Group",
+      "group": "Actions"
+    },
+    {
+      "name": "Tooltip",
+      "group": "Overlay"
+    },
+    {
+      "name": "Trace",
+      "group": "Data"
+    },
+    {
+      "name": "Typography",
+      "group": "Foundations"
+    },
+    {
+      "name": "Iconography",
+      "group": "Foundations"
+    },
+    {
+      "name": "Form",
+      "group": "Forms"
+    }
+  ],
+  "ai": [
+    {
+      "name": "Chain of Thought",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Chat",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Checkpoint",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Confirmation",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Context",
+      "group": "AI Elements"
+    },
+    {
+      "name": "File Tree",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Inline Citation",
+      "group": "AI Elements"
+    },
+    {
+      "name": "AI Message",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Model Selector",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Plan",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Prompt Input",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Queue",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Reasoning",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Sources",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Stack Trace",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Subagent",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Suggestion",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Task",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Terminal",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Test Results",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Tool",
+      "group": "AI Elements"
+    },
+    {
+      "name": "Artifact",
+      "group": "AI Elements"
+    }
+  ]
+}
