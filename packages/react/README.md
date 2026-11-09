@@ -4,8 +4,8 @@ React 19 components and AI interface patterns built on shadcn/ui, with Forma,
 Minimal, Nocturne, and Brutalism identities. Design values remain exploratory.
 The package is configured for public npm publication as
 `@inverse_ratio/design-system` under MIT, with upstream notices retained.
-It has not been published. Approval-gated workflows are implemented; account
-configuration and the first release remain pending.
+Version 0.1.0 is published. Future releases use the approval-gated GitHub
+workflows after npm trusted publishing and environment protection are configured.
 
 ## Build and verify the installable artifact
 
@@ -56,6 +56,38 @@ theme helpers. Individual subpaths avoid collecting unrelated components.
 All UI/hook/AI entries preserve a client boundary. The separate `theme` entry can
 resolve variables without a DOM; `applyReactTheme()` itself requires a browser
 root. No Next.js/RSC compatibility claim follows from the Node SSR import smoke test.
+
+## Choose a design identity
+
+The same component imports work across all four systems. Apply a selection on
+browser initialization or in your application’s theme-switch handler:
+
+```ts
+applyReactTheme({ system: 'forma', mode: 'light', accent: 0 });
+applyReactTheme({ system: 'minimal', mode: 'dark', accent: 1 });
+applyReactTheme({ system: 'nocturne', mode: 'dark', accent: 2 });
+applyReactTheme({ system: 'brutalism', mode: 'light', accent: 0 });
+```
+
+These calls demonstrate alternatives; the last selection applied owns the root.
+
+| System | Light / dark expression | Accent indices |
+| --- | --- | --- |
+| Forma | Light / Dark | 0: fresh green |
+| Minimal | Blueprint / Command | 0: Blueprint Blue; 1: Terracotta Orange; 2: Emerald Green |
+| Nocturne | Daydream / Nebula | 0: Ultraviolet / Iris; 1: Orchid / Magenta; 2: Iris / Cool Refraction |
+| Brutalism | Manifesto / Underground | 0: Acid Lime; 1: Industrial Orange; 2: Electric Violet |
+
+Pass `light` or `dark` as the mode, rather than the display expression name.
+The theme changes component geometry, icon strokes, typography and motion as
+well as colors. Load any desired fonts yourself; font files are not bundled.
+
+For custom application surfaces, use `--background`, `--foreground`, `--card`,
+`--border`, `--font-sans` and `--radius`. The identity accent is `--signal`;
+shadcn’s `--accent` is the quieter hover/selection surface. Primary actions use
+`--primary` and `--primary-foreground`: Forma light uses ink, while the other
+expressions follow the selected signal. Use packaged components to inherit the
+full identity anatomy rather than recreating it with generic token styling.
 
 ## Public entry points
 

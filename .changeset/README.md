@@ -4,6 +4,6 @@ Run `npm run changeset` for user-visible changes to `@inverse_ratio/design-syste
 Choose patch/minor/major and describe the final behavior. Commit the generated note
 with the implementation. The version workflow opens a release PR; it never publishes.
 
-The initial package version remains 0.1.0. There is no seed changeset that silently
-bumps the first release. After configuration, the first candidate can be requested
-with the Release workflow. Later notes drive version/changelog PRs automatically.
+Version 0.1.0 is published. Pending notes request subsequent versions; Actions
+consumes them in a version/changelog PR. Merge that PR to trigger the tested,
+approval-gated release. See `docs/architecture/RELEASE_SETUP.md`.

@@ -1,14 +1,24 @@
 # Release setup: @inverse_ratio/design-system
 
-The owner approved **public access and MIT**. Version 0.1.0 is the initial
-candidate. Package metadata and release workflows exist locally; nothing has
-been pushed or published by this work. npm membership, package availability,
-GitHub protections and OIDC publishing have not been independently verified.
+The owner approved **public access and MIT**. Version 0.1.0 was published manually
+and its npm integrity was verified against the tested tarball. GitHub protection
+and OIDC publishing still require account configuration and a successful remote run.
+
+## Publish the next patch through Actions
+
+A pending patch note in `.changeset/themed-package-guidance.md` requests 0.1.1
+from the current 0.1.0 base. Commit it with the package README update and merge
+into main. **Version packages** opens/updates a version/changelog PR. You can
+also start that workflow from Actions → Version packages → Run workflow → main.
+Review and merge its PR; **Release** then tests the new version and waits for
+npm-production approval when publishing is enabled and protection is configured.
+Do not create a release tag first or run Release while changeset notes are pending.
+The workflows create the GitHub tag/release after npm publication succeeds.
 
 ## Configure accounts before enabling publication
 
-1. Confirm your npm account has publish rights in `inverse_ratio` and the name
-   `@inverse_ratio/design-system` is available to that organization. Retain both
+1. Confirm your npm account has publish rights in `inverse_ratio` for
+   `@inverse_ratio/design-system`. Retain both
    the local MIT license and upstream shadcn notices.
 2. Review and commit the repository changes to `muditxsharma/design-system`.
    Enable Actions and allow GitHub Actions to create pull requests. Protect
