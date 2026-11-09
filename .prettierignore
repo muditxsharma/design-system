@@ -1,0 +1,10 @@
+**/node_modules/**
+**/dist/**
+artifacts/**
+**/test-results/**
+package-lock.json
+apps/react-library/src/demo-usage.json
+apps/react-library/src/catalog-manifest.json
+packages/react/src/ui/**
+packages/react/src/hooks/**
+packages/react/src/lib/highlighter.tsx

@@ -1,0 +1,151 @@
+name: Release
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  status:
+    if: github.repository == 'muditxsharma/design-system' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    outputs:
+      needed: ${{ steps.status.outputs.needed }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24.12.0'
+          package-manager-cache: false
+      - id: status
+        run: node scripts/release/check-version.mjs
+
+  candidate:
+    needs: status
+    if: needs.status.outputs.needed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      artifact: ${{ steps.prepare.outputs.artifact }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24.12.0'
+          package-manager-cache: false
+      - run: npm ci
+      - run: npm run test:release
+      - run: npm run check:react-sources
+      - run: npm run test:static
+      - run: npm exec -- playwright install --with-deps chromium
+      - run: npm run test:package
+      - run: npm run build:catalog
+      - run: npm run test:react
+      - id: prepare
+        run: node scripts/release/prepare-candidate.mjs
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ${{ steps.prepare.outputs.artifact }}
+          path: artifacts/release/
+          if-no-files-found: error
+          retention-days: 14
+
+  protection:
+    needs: candidate
+    if: vars.NPM_RELEASE_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      # Fail closed before referencing the approval environment if it is unconfigured.
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const { pathToFileURL } = await import('node:url');
+            const { verifyGithubGuards } = await import(pathToFileURL(`${process.env.GITHUB_WORKSPACE}/scripts/release/github-guards.mjs`).href);
+            await verifyGithubGuards(github, context);
+
+  publish:
+    needs: [candidate, protection]
+    if: vars.NPM_RELEASE_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    environment: npm-production
+    concurrency:
+      group: npm-production-publish
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      actions: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24.12.0'
+          package-manager-cache: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: ${{ needs.candidate.outputs.artifact }}
+          path: artifacts/release/
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const { pathToFileURL } = await import('node:url');
+            const { verifyGithubGuards } = await import(pathToFileURL(`${process.env.GITHUB_WORKSPACE}/scripts/release/github-guards.mjs`).href);
+            await verifyGithubGuards(github, context);
+      # No install or build here. Publish only the tested, reviewed tarball using OIDC.
+      - run: node scripts/release/publish.mjs
+        env:
+          NPM_RELEASE_ENABLED: ${{ vars.NPM_RELEASE_ENABLED }}
+
+  finalize:
+    needs: [candidate, publish]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: ${{ needs.candidate.outputs.artifact }}
+          path: artifacts/release/
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const { pathToFileURL } = await import('node:url');
+            const { verifyCandidate } = await import(pathToFileURL(`${process.env.GITHUB_WORKSPACE}/scripts/release/contracts.mjs`).href);
+            const { candidate } = await verifyCandidate('artifacts/release', { commit: context.sha, repository: `${context.repo.owner}/${context.repo.repo}` });
+            const ref = `tags/${candidate.tag}`;
+            try {
+              const existing = await github.rest.git.getRef({ ...context.repo, ref });
+              if (existing.data.object.sha !== context.sha) throw new Error('Release tag points to another commit.');
+            } catch (error) {
+              if (error.status !== 404) throw error;
+              await github.rest.git.createRef({ ...context.repo, ref: `refs/${ref}`, sha: context.sha });
+            }
+            try {
+              await github.rest.repos.getReleaseByTag({ ...context.repo, tag: candidate.tag });
+              core.info('Matching GitHub release already exists.');
+            } catch (error) {
+              if (error.status !== 404) throw error;
+              const { readFile } = await import('node:fs/promises');
+              await github.rest.repos.createRelease({ ...context.repo, tag_name: candidate.tag, target_commitish: context.sha,
+                name: `${candidate.packageName}@${candidate.version}`, body: await readFile('artifacts/release/release-notes.md', 'utf8') });
+            }

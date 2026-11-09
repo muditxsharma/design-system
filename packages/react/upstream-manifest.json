@@ -1,0 +1,344 @@
+{
+  "provider": "shadcn/ui",
+  "license": "MIT",
+  "cliVersion": "4.23.0",
+  "retrieved": "2026-11-09",
+  "registry": "https://ui.shadcn.com/r/styles/{style}/{name}.json",
+  "files": [
+    {
+      "path": "src/ui/accordion.tsx",
+      "sha256": "8be83ff9ed96c00f4adea42021535a2b77aff7cf627ba9bc152f718e7cf625ec",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/alert-dialog.tsx",
+      "sha256": "47cceada8aefcbf417934c54f3120152a5eb85ca3f8d870f7f2419dbf02d0d4e",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/alert.tsx",
+      "sha256": "d03dcae5cdb63c381c1144ca9a0c49ba0e46466967d7deb94662034042acb034",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/aspect-ratio.tsx",
+      "sha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/attachment.tsx",
+      "sha256": "0b9450d39f58bf337ba444382a40224882f84f7a014c76a3ceb7d20c57edf56b",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/avatar.tsx",
+      "sha256": "f757031690c648e3b115907bff6ded599076ea7245715d32b98dad2bd2153899",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/badge.tsx",
+      "sha256": "13a9380dfff853ee730c14a52df49f22aecd31f40f2998d7c1e7ec458b6e1650",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/breadcrumb.tsx",
+      "sha256": "c75fcd3d9e8470188bc0dd4b27a2b26fff3ad42b9c9c534a953dc090ae2cba33",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/bubble.tsx",
+      "sha256": "df1e461e33e835b7f69296939c2325e8cd76941b5ec69375d80d639793c5c4e2",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/button-group.tsx",
+      "sha256": "1e652d6fbaf4f53a1a1a7bcdb5481329f31c13d64fb60105ab9cb0bbf7f672c9",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/button.tsx",
+      "sha256": "79dd6f75f8136394442202d6b8b922fb269eaad0a5dba579397c9d5b41f893bb",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/calendar.tsx",
+      "sha256": "77222db6a57b8da37acbe2e30036c4610d49716113ea861f4e3167ba528d5d97",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/card.tsx",
+      "sha256": "ef8305b12c3112dab42a4708b41b1ebcc042fa5ab4c20f039da8d45b09ed5059",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/carousel.tsx",
+      "sha256": "1454928d0839f6e135efbb807459cfce8db16705e5e4b9005c9caed09dff8060",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/chart.tsx",
+      "sha256": "35e2fa755465ef8eb8ff8b483d493204d452152e7a8863474b1a69f5d44484db",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/checkbox.tsx",
+      "sha256": "ba0ac64064e2d8fa7299d53e9e84b9a4772fef8dd4cf6170c56d3030a1d69941",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/code-block.tsx",
+      "sha256": "a009f1006539da69684df88e396cab0525f446a1ee66697b70e183dc18788557",
+      "registryStyle": "base-nova"
+    },
+    {
+      "path": "src/ui/collapsible.tsx",
+      "sha256": "eb4ee2a9ddb3c566c509753a79e4f4c9425d9f8474d55f61f8c8694928b6a509",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/combobox.tsx",
+      "sha256": "31277b3ab5fb826caa0c4ae83884b934192ff8a3cd01eeb5bf73f17330308331",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/command.tsx",
+      "sha256": "e23dd6f9e9526f5fd574132b79ed832750246c3e837372488ad9e32c11d3f5e8",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/context-menu.tsx",
+      "sha256": "bcde5df1ed9887bb050f0badabfb5f79912eb53bdc883dbe6c003d05914d99a4",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/dialog.tsx",
+      "sha256": "8affbc99d4b7a1e877f3a53592d6f5c8d1d69e955e708fde6a1b1782268e2549",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/direction.tsx",
+      "sha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/drawer.tsx",
+      "sha256": "5e35acda7b6f9c4c114d9c0583ba80b27aacb69c4e79b7afe74b7db29eeca6c7",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/dropdown-menu.tsx",
+      "sha256": "d954efb735f13734751207ad22cb0cddd7f6ec53c59d16675d103dae08cb61fb",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/empty.tsx",
+      "sha256": "54f529ccf72c18c4b5abd5586a7cf1f2a4c8d207aac366029d66ed095cb2965d",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/field.tsx",
+      "sha256": "0cd043484d69a2cec96bfb5fd4c88e6a9a4268896dace0da971400c09547e95e",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/form.tsx",
+      "sha256": "bc1dd94002854c1261d1d460a910f710f2bbd095b3455c83bc9b824ad3a65563",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/hover-card.tsx",
+      "sha256": "497d153d1a8f52a0e0d08ec7689a721b34016732ffbee09f864bed800933d5cf",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/input-group.tsx",
+      "sha256": "4e49669ce714b349f3833ec50f7856b9645c3e3324ef9f92da320b604f639f6d",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/input-otp.tsx",
+      "sha256": "9f81898aeaabbb104cc22ffda551a333eb22608c543c4800412e2faaa802e311",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/input.tsx",
+      "sha256": "0c9457181f6ddc80969bcf854e92c362903a55b6e889fbef3fd85343ecc4af5b",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/item.tsx",
+      "sha256": "d8be2a2b925f128b91e9b9c7b66680c8f8cbd64d4f9db32185a44123a198fe58",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/kbd.tsx",
+      "sha256": "c0c0ae6a7d1adb7749b9b34cab8f4d2f5caf333e819b64c2051e77f918d3661f",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/label.tsx",
+      "sha256": "b823de7355666bd6a6a2cf88a6630e436d021b38fdbef5b749fac0921b86f44d",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/marker.tsx",
+      "sha256": "036277635df058b8dc6e6dbe5cb738bc595e5035b885be42c60f904263725424",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/menubar.tsx",
+      "sha256": "ca1a7f6775f9095183d63faadc6d4ed5ee2097139b4edeeefa60210379c47092",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/message-scroller.tsx",
+      "sha256": "efa9b9bb7732d437af25edc7919ee9cdbbf6b72328c5a58276dcefc78feace71",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/message.tsx",
+      "sha256": "64e9ae0f9d1e268b0ed7b738a53d374d273fe1e7e2dd7b35ad7417e50a9bbe6c",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/native-select.tsx",
+      "sha256": "4bdbce5575dce610fed747df4547a3d494713f4df8d28e09b3ccee62e4d72f93",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/navigation-menu.tsx",
+      "sha256": "fbe81d7c358df0d21e49b03174ef53be7d66226a3dce1a97ff3d4a260ed833a3",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/pagination.tsx",
+      "sha256": "afc3237134a120ac8c0f904976e21b9301b402a4e76306a39f87e57b60b32a89",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/popover.tsx",
+      "sha256": "d8bfac795e9750a8994836b9f773ddceb4892730f9ee1e02e498fb6892c3be44",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/progress.tsx",
+      "sha256": "e012e1f7e6e66d11229d1233eccf91954edcd9179b418ff1d114dc651b86fd35",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/questionnaire.tsx",
+      "sha256": "b26ff78e2bf4f251130675f0dbd153586ef248f35487731243d58c10cdf62770",
+      "registryStyle": "base-nova"
+    },
+    {
+      "path": "src/ui/radio-group.tsx",
+      "sha256": "38c810acd91e1ef4aa8a9c7ec8375b6e65c89ce3f2292dacebaf5176f1d4e394",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/resizable.tsx",
+      "sha256": "aaf3ea20e8060c75dd86e06fedfca053d49f81071123ba647b5699efcbc010ea",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/scroll-area.tsx",
+      "sha256": "20ad7c7f2cf5ef1bd9cb6a2c7ea5a81946465512906cec1700c55c4f28a4b6bb",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/select.tsx",
+      "sha256": "962830436bd0b7ee50e556f0747e277d6a86869ed27d167516346b15f26309d8",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/separator.tsx",
+      "sha256": "7d943e8c309f8d530f25433ffc9167f771e635f2eeb1c3b55fa16955068c1657",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/sheet.tsx",
+      "sha256": "ea473d38a26a9b0b879e5a13139899ad45e9782e896b3fa205c7763a6c506876",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/sidebar.tsx",
+      "sha256": "633f9d9c8b95d1282f457d0c2654a72fc67fee71834a87f33a6dfa8d6d866f9d",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/skeleton.tsx",
+      "sha256": "f51ce0fcd31e5c31437382e80ea0af94b4fc3d64221d27091d36824546780a43",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/slider.tsx",
+      "sha256": "22e24f22db1e73109f212bad5e82a5b24d1a96ca5abeef84f16ebb5b1965c9bf",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/sonner.tsx",
+      "sha256": "13ccc9b0fe4248e622f83a1d3b2f0566b72b5e04162d7d0c8db8945ecc71b55f",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/spinner.tsx",
+      "sha256": "5d040fc49cb54c0296070644053b5a8840ddbfca89a430546bf308df3fffad65",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/switch.tsx",
+      "sha256": "b43b0fd1a9a753d9aa777eeab68e468d37fa18a7ef74341c616c204160ea0390",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/table.tsx",
+      "sha256": "bd1a9fc83a5a2149e504038e274bb7e5a0351af59f6896df52ac4d5b439695ac",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/tabs.tsx",
+      "sha256": "1bb52d8082f7518a9712f1431c531217697eb2fc91cbebc534b792003b8dc767",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/textarea.tsx",
+      "sha256": "5cafcfeeee29534f449387a16b585f5923d2faab1a0cdc50a874416b175f59ce",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/toggle-group.tsx",
+      "sha256": "3e6f81aec191d302bdd16b4748f1270649ae7a9769c8c0d7a98740a647526550",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/toggle.tsx",
+      "sha256": "28ae7d72730890a3ba6c668fd511c63a358ad26534c2c25d5922748d47e1fa99",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/tooltip.tsx",
+      "sha256": "908d99c8aaea79508c94b48c3278a08856f32d1d4ce531860fde038fdacb7c9d",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/ui/trace.tsx",
+      "sha256": "47b8ebe56154388afafb5d7be54ffe0d4f8d00feed414e88b64dfc7e6af1b795",
+      "registryStyle": "base-nova"
+    },
+    {
+      "path": "src/hooks/use-highlighted-code.ts",
+      "sha256": "cf1681000657738e9ec5f25aa52db26d83205178d3563d5f57d40bdd491f42b2",
+      "registryStyle": "base-nova"
+    },
+    {
+      "path": "src/hooks/use-mobile.ts",
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b",
+      "registryStyle": "new-york-v4"
+    },
+    {
+      "path": "src/lib/highlighter.tsx",
+      "sha256": "ab3cfd4e09735bf90735e851dfe5bc4f17151f3f36b9d4d55e9cd809b1aa2b9c",
+      "registryStyle": "base-nova"
+    }
+  ]
+}

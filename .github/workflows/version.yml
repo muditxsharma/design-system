@@ -1,0 +1,50 @@
+name: Version packages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: version-packages
+  cancel-in-progress: false
+jobs:
+  version:
+    if: github.repository == 'muditxsharma/design-system' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24.12.0'
+          package-manager-cache: false
+      - run: npm ci
+      # Deliberately no publish input and no id-token permission.
+      - id: changesets
+        uses: changesets/action@a45c4d594aa4e2c509dc14a9f2b3b67ba3780d0d # v1
+        with:
+          version: npm run version-packages
+          title: 'Release: version @inverse_ratio/design-system'
+          commit: 'chore: version design-system package'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # GITHUB_TOKEN-created PRs do not trigger ordinary pull_request workflows.
+      # Explicit workflow_dispatch is supported and supplies checks without a PAT.
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+        if: steps.changesets.outputs.pullRequestNumber != ''
+        env:
+          RELEASE_PR: ${{ steps.changesets.outputs.pullRequestNumber }}
+        with:
+          script: |
+            const { data: pr } = await github.rest.pulls.get({ ...context.repo, pull_number: Number(process.env.RELEASE_PR) });
+            if (pr.head.repo.full_name !== `${context.repo.owner}/${context.repo.repo}` || pr.base.ref !== 'main' || !pr.head.ref.startsWith('changeset-release/')) {
+              throw new Error('Unexpected release PR source.');
+            }
+            await github.rest.actions.createWorkflowDispatch({ ...context.repo, workflow_id: 'ci.yml', ref: pr.head.ref });

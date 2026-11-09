@@ -1,0 +1,36 @@
+{
+  "name": "structured-chaos-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Structured Chaos design system workspace",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @design-library/react-app",
+    "build": "npm run build:lib && npm run build:catalog",
+    "typecheck": "npm run typecheck --workspace @inverse_ratio/design-system",
+    "test:react": "npm run test --workspace @design-library/react-app",
+    "test:static": "python3 tests/check_library.py",
+    "snippets": "node scripts/generate-react-snippets.mjs",
+    "check:react-sources": "node scripts/check-react-sources.mjs",
+    "build:lib": "npm run build --workspace @inverse_ratio/design-system",
+    "build:catalog": "npm run build --workspace @design-library/react-app",
+    "pretest:react": "npm run build:lib",
+    "test:package": "node scripts/test-packed-package.mjs",
+    "format:react": "prettier --write \"packages/react/scripts/*.mjs\" \"packages/react/src/{theme.ts,index.ts,*.css}\" \"packages/react/src/ai/**/*.tsx\" \"apps/react-library/src/**/*.{ts,tsx,css}\" \"apps/react-library/*.{ts,json}\" \"apps/react-library/tests/*.ts\" \"scripts/*.mjs\" \"tests/fixtures/package-consumer/**/*.{ts,tsx,css,json,html}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version && npm install --package-lock-only --ignore-scripts --no-audit --no-fund",
+    "test:release": "node --test tests/release.test.mjs",
+    "release:prepare": "node scripts/release/prepare-candidate.mjs"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.8",
+    "prettier": "^3.6.2",
+    "yaml": "^2.9.1"
+  }
+}

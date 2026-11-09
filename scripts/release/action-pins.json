@@ -1,0 +1,32 @@
+{
+  "actions/checkout": {
+    "sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "tag": "v7.0.1",
+    "source": "https://github.com/actions/checkout"
+  },
+  "actions/setup-node": {
+    "sha": "949feb2413d6458794dcd2491c4babbbce0c15c1",
+    "tag": "v7.1.0",
+    "source": "https://github.com/actions/setup-node"
+  },
+  "actions/upload-artifact": {
+    "sha": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+    "tag": "v7.0.2",
+    "source": "https://github.com/actions/upload-artifact"
+  },
+  "actions/download-artifact": {
+    "sha": "9000827ccba6bdab643e8b6fd33ac0654aef8333",
+    "tag": "v8.0.2",
+    "source": "https://github.com/actions/download-artifact"
+  },
+  "actions/github-script": {
+    "sha": "3a2844b7e9c422d3c10d287c895573f7108da1b3",
+    "tag": "v9.0.0",
+    "source": "https://github.com/actions/github-script"
+  },
+  "changesets/action": {
+    "sha": "a45c4d594aa4e2c509dc14a9f2b3b67ba3780d0d",
+    "tag": "v1",
+    "source": "https://github.com/changesets/action"
+  }
+}

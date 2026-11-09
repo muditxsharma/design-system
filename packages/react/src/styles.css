@@ -1,0 +1,49 @@
+/* Public package entry: compiled before packing, no global Preflight reset. */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities) source(none);
+@import './tokens.css';
+@import './identity.css';
+@source "./ui";
+@source "./ai";
+@source "./hooks";
+
+.design-theme {
+  color: var(--foreground);
+  font-family: var(--font-sans, Arial, sans-serif);
+  line-height: 1.5;
+}
+.design-theme *,
+.design-theme *::before,
+.design-theme *::after {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+.design-theme :is(button, input, textarea, select) {
+  font-family: inherit;
+}
+.design-theme :is(button, a, input, textarea, select) {
+  outline-offset: 4px;
+}
+.design-theme button:not(:disabled),
+.design-theme [role='button'] {
+  cursor: pointer;
+}
+.design-theme :is(h1, h2, h3) {
+  font-family: var(--font-display, var(--font-sans));
+}
+
+/* Minimal baseline only for package anatomy; this does not reset host typography. */
+@layer base {
+  .design-theme :where([data-slot]) {
+    border-width: 0;
+    border-style: solid;
+  }
+  .design-theme
+    :where(button[data-slot], input[data-slot], select[data-slot], textarea[data-slot]) {
+    appearance: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+  }
+}
