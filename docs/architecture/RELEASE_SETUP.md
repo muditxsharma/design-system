@@ -26,9 +26,12 @@ The workflows create the GitHub tag/release after npm publication succeeds.
    explicitly dispatches CI on its Changesets branch because PR events created
    with `GITHUB_TOKEN` do not normally trigger another workflow.
 3. Create the GitHub environment **npm-production**. Configure required reviewers,
-   prevent self-review, disable administrator bypass, and permit protected
-   branches only. Choose another eligible reviewer: someone who initiates a run
-   cannot also approve it with self-review disabled. Confirm your GitHub plan
+   leave **Prevent self-review** unchecked to allow the initiating reviewer to
+   approve their own release, disable administrator bypass, and permit protected
+   branches only. Add your GitHub account as a required reviewer if you will
+   approve your own releases. Required manual approval remains mandatory.
+   Self-review is allowed by the owner’s updated policy; this supersedes earlier
+   instructions requiring a different approver. Confirm your GitHub plan
    supports these protections. The workflow reads the environment and branch
    through the API and fails closed when protections are missing or unreadable.
 4. Configure npm trusted publishing for repository owner **muditxsharma**, repository

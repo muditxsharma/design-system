@@ -110,7 +110,7 @@ test('traversal and unverified/stale test evidence are rejected', async () =>
     await assert.rejects(verifyCandidate(directory, { commit, repository }), /did not pass/);
   }));
 
-test('required reviewers, no self-review, no bypass and branch protection are mandatory', () => {
+test('required reviewers, no bypass and branch protection remain mandatory with self-review allowed', () => {
   validateEnvironment(protectedEnvironment, { protected: true });
   assert.throws(() =>
     validateEnvironment({ ...protectedEnvironment, protection_rules: [] }, { protected: true }),
@@ -119,12 +119,21 @@ test('required reviewers, no self-review, no bypass and branch protection are ma
     validateEnvironment({ ...protectedEnvironment, can_admins_bypass: true }, { protected: true }),
   );
   assert.throws(() => validateEnvironment(protectedEnvironment, { protected: false }));
+  validateEnvironment(
+    {
+      ...protectedEnvironment,
+      protection_rules: [
+        { type: 'required_reviewers', prevent_self_review: false, reviewers: [{}] },
+      ],
+    },
+    { protected: true },
+  );
   assert.throws(() =>
     validateEnvironment(
       {
         ...protectedEnvironment,
         protection_rules: [
-          { type: 'required_reviewers', prevent_self_review: false, reviewers: [{}] },
+          { type: 'required_reviewers', prevent_self_review: false, reviewers: [] },
         ],
       },
       { protected: true },

@@ -72,8 +72,8 @@ settings have been changed and no package has been published.
   have not been independently checked.
 - [ ] **17. Configure GitHub administrative and Actions settings.** Verify main
   protection, required CI, review and workflow PR creation permissions.
-- [ ] **18. Configure human approval.** Set npm-production reviewers, prevent
-  self-review, disallow admin bypass and permit protected branches only.
+- [ ] **18. Configure human approval.** Set npm-production reviewers, allow
+  self-review if desired, disallow admin bypass and permit protected branches only.
 - [ ] **19. Configure npm trust and first-package bootstrap.** Bind the exact
   repository/workflow/environment, allow publishing, and resolve initial package
   creation before relying on tokenless OIDC.

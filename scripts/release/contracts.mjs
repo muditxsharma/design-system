@@ -27,7 +27,7 @@ export function validatePackage(manifest) {
 export function validateEnvironment(environment, branch) {
   const rule = environment.protection_rules?.find((item) => item.type === 'required_reviewers');
   assert(rule?.reviewers?.length > 0, 'Configure required reviewers on npm-production.');
-  assert.equal(rule.prevent_self_review, true, 'Enable prevention of self-review.');
+  // Self-review is allowed by repository policy; required approval still applies.
   assert.equal(
     environment.can_admins_bypass,
     false,
